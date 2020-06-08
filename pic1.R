@@ -1,4 +1,4 @@
-# Рисунки к статье о контрольных картах
+# Рисунки и расчеты к статье о контрольных картах
 require(grDevices)
 library(qcc)
 library(readr)
@@ -24,9 +24,8 @@ dev.off()
 svg('pic2.svg', width = 11, height = 7,  pointsize = 14)
 qcc(data$diff[25:37], type="g",title="G-chart 2019")
 dev.off()
-#svg('pic3.svg', width = 11, height = 7,  pointsize = 14)
-#qcc(data2[32:40,1], type="g",title="G-chart 201",limits= c(16.58457, 2416.421))
-#dev.off()
 qcc.options(old)
 library(ADGofTest)
 ad.test(data$diff[25:37],pgeom,prob=1/mean(data$diff[25:37]))
+
+(log(0.025)/(log(1-))
